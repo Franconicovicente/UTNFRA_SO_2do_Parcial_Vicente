@@ -1,0 +1,13 @@
+---
+- hosts: all
+
+  tasks:
+    - include_role:
+        name: 2do_parcial
+    
+    - name: Playbook para generar estructura y archivos de datos
+      debug:
+        msg: "Despues de la ejecucion del rol"
+        hosts: localhost
+        roles:
+          - 2do_parcial  
